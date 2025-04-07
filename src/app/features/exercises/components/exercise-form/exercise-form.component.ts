@@ -29,8 +29,8 @@ export class ExerciseFormComponent implements AfterViewInit {
   }
 
 
-  addExercise() {
-    this.exerciseService.addExercise(this.name, this.duration);
+  addExercise(name: string, duration: number) {
+    this.exerciseService.addExercise(name, duration);
     this.resetForm();
   }
 

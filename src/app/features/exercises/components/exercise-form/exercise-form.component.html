@@ -1,4 +1,4 @@
-<form (submit)="addExercise()">
+<form #form (submit)="addExercise(name.value, duration.value); $event.preventDefault()">
   <div class="form-group">
     <label for="name">Exercise Name</label>
     <input
