@@ -1,16 +1,17 @@
 import { Injectable, signal } from '@angular/core';
+import { Exercise } from './exercise-item.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExerciseService {
 
-private exercises = signal<{ name: string; duration: number }[]>([
-  {
-    name: 'Jog',
-    duration: 30,
-  }
-]);
+  private exercises = signal<Exercise[]>([
+    {
+      name: 'Jog',
+      duration: 30,
+    }
+  ]);
 
 //
 getExercises(){
